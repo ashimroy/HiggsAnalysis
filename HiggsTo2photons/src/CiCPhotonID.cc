@@ -67,7 +67,8 @@ Float_t CiCPhotonID::DeltaRToTrackHgg(reco::PhotonRef photon, Int_t maxlosthits)
 
     reco::GsfElectronRef el(elHandle, iel);
     
-    if(el->gsfTrack()->trackerExpectedHitsInner().numberOfHits() > maxlosthits)
+    //if(el->gsfTrack()->trackerExpectedHitsInner().numberOfHits() > maxlosthits)
+    if(el->gsfTrack()->hitPattern().numberOfLostHits(reco::HitPattern::MISSING_INNER_HITS) > maxlosthits)
       continue;
 
     if(el->superCluster() == photon->superCluster()) {
