@@ -19,7 +19,6 @@
 <use name="SimTracker/Records"/>
 <use name="SimTracker/TrackerHitAssociation"/>
 <use name="JetMETCorrections/Objects"/>
-<use name="CMGTools/External"/>
 <use name="TrackingTools/IPTools"/>
 <use name="heppdt"/>
 <use name="root"/>
